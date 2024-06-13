@@ -37,7 +37,7 @@
 -->terraform apply => Apply the Terraform deployment.
 -->terraform destroy => To delete the created resources.
      
-## OUtput 
+## Output 
 Successfully added Resources.
 
 
