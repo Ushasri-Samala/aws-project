@@ -17,10 +17,11 @@
                   **"description"** => IT sets the description of the Athena workgroup.
                   **"state"** => This sets the state of the Athena workgroup, here the workgroup is created and enabled.
 
-## Commands 
+## Commands to run the application
 ->terraform init => To initialize the Terraform working directory.
 ->terraform plan => Plan the Terraform deployment.
 ->terraform apply => Apply the Terraform deployment.
 ->terraform destroy => To delete the created resources.
      
-
+## OUtput 
+Succesfully added Resources.
