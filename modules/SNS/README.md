@@ -1,5 +1,14 @@
 # SNS
 
+
+## Prerequisites 
+
+->Terraform installed on your local machine
+->AWS credentials configured on your local machine
+
+
+## Resources Created
+
 -----> Resource 1 **"aws_sns_topic"** => This resource creates one or more Amazon SNS topics.
 **"for_each"** => This block is used to create a topic for each element in the list of topic names.
 **"for_each = toset(var.topics)"** => THis converts a list into a set, and then uses that set to iterate over and create one topic for each unique element in the set.
@@ -18,8 +27,7 @@ The block of code creates a list of all possible combinations of SNS topics and 
 **"topic_name"** = This sets the name of the current topic. **"topic_arn"** => This sets the ARN of the current topic. **"endpoint"** => THis sets the current endpoint.
 
 
-
-Resource 2: **"aws_sns_topic_subscription"** => 
+----->Resource 2: **"aws_sns_topic_subscription"** => 
 
 ![image](https://github.com/Ushasri-Samala/aws-project/assets/138238539/1a38d0bb-5950-47df-9109-f4b88c6c996d)
 
@@ -32,3 +40,15 @@ This section of the code is creating a map (a key-value pair) that will be used 
 **"topic_arn"** => This sets the subscription to the ARN of the corresponding SNS topic.
 **"protocol"** => This sets the subscription to email.
 **"endpoint"** => This sets the subscription to the corresponding email address.
+
+
+## Commands to run the application
+->terraform init => To initialize the Terraform working directory.
+->terraform plan => Plan the Terraform deployment.
+->terraform apply => Apply the Terraform deployment.
+->terraform destroy => To delete the created resources.
+     
+## Output 
+Successfully added Resources.
+
+
