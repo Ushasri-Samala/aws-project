@@ -5,7 +5,10 @@
 **"for_each = toset(var.topics)"** => THis converts a list into a set, and then uses that set to iterate over and create one topic for each unique element in the set.
 **"name = each.key"** => here "name" sets the name of the SNS topics to the current element being processed in the for_each loop. "each.key" refers to the name of the current element in the set.
 
-----> !![image](https://github.com/Ushasri-Samala/aws-project/assets/138238539/213db262-6546-4ce1-8481-1e9f3efc91e3)
+---->
+
+![image](https://github.com/Ushasri-Samala/aws-project/assets/138238539/213db262-6546-4ce1-8481-1e9f3efc91e3)
+
 The block of code creates a list of all possible combinations of SNS topics and endpoints. Each combination is represented by an object with three fields: topic_name, topic_arn, and endpoint.
 
 **"locals"** => This block is used to define local values, which are temporary variabes that can be used within the same Terraform configuration. Using "locals" we can imporove readability and reduce duplication. 
@@ -15,7 +18,9 @@ The block of code creates a list of all possible combinations of SNS topics and 
 **"topic_name"** = This sets the name of the current topic. **"topic_arn"** => This sets the ARN of the current topic. **"endpoint"** => THis sets the current endpoint.
 
 
+
 Resource 2: **"aws_sns_topic_subscription"** => 
+
 ![image](https://github.com/Ushasri-Samala/aws-project/assets/138238539/1a38d0bb-5950-47df-9109-f4b88c6c996d)
 
 
