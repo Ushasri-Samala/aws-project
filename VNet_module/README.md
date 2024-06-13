@@ -1,5 +1,14 @@
 # Virtual Network 
 
+
+## Prerequisites 
+
+->Terraform installed on your local machine
+->AWS credentials configured on your local machine
+
+
+## Resources Created 
+
 ---> Resource: **"azurerm_resource_group"** => This resource creates an Azure Resource Group.
 **"name"** => This sets the name of the resource group.
 **"location"** => This sets the location of the resorce group.
@@ -20,3 +29,17 @@
 **"name"** => This sets the name of the subnet.
 **"address_prefix"** => This sets the address prefix of the subnet..
 **"security_group"** => This associates the subnet with the network security group created earlier.
+
+
+## Commands to run the application
+-->terraform init => To initialize the Terraform working directory.
+-->terraform plan => Plan the Terraform deployment.
+-->terraform apply => Apply the Terraform deployment.
+-->terraform destroy => To delete the created resources.
+     
+## OUtput 
+Successfully added Resources.
+
+
+
+
