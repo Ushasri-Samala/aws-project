@@ -4,7 +4,7 @@
 ## Prerequisites 
 
 ->Terraform installed on your local machine
-->AWS credentials configured on your local machine
+->Azure credentials configured on your local machine
 
 
 ## Resources Created 
