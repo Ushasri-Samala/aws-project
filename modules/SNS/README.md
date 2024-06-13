@@ -1,15 +1,14 @@
 # SNS
 
-Resource 1 **"aws_sns_topic"** => This resource creates one or more Amazon SNS topics.
+-----> Resource 1 **"aws_sns_topic"** => This resource creates one or more Amazon SNS topics.
 **"for_each"** => This block is used to create a topic for each element in the list of topic names.
 **"for_each = toset(var.topics)"** => THis converts a list into a set, and then uses that set to iterate over and create one topic for each unique element in the set.
 **"name = each.key"** => here "name" sets the name of the SNS topics to the current element being processed in the for_each loop. "each.key" refers to the name of the current element in the set.
 
-**"locals"** => This block is used to define local values, which are temporary variabes that can be used within the same Terraform configuration.
-Using "locals" we can imporove readability and reduce duplication. 
+----> !![image](https://github.com/Ushasri-Samala/aws-project/assets/138238539/213db262-6546-4ce1-8481-1e9f3efc91e3)
+The block of code creates a list of all possible combinations of SNS topics and endpoints. Each combination is represented by an object with three fields: topic_name, topic_arn, and endpoint.
 
-The block of code creates a list of all possible combinations of SNS topics and endpoints. Each combination is represented by an object with three fields: topic_name, topic_arn, and endpoint. The flatten() function is used to combine the nested lists created by the two loops into a single list.
-
+**"locals"** => This block is used to define local values, which are temporary variabes that can be used within the same Terraform configuration. Using "locals" we can imporove readability and reduce duplication. 
 **"flatten()"** => This function is used to combine multipe nested lists into a single list.
 **"for topic_key, topic in aws_sns_topic.my_topics : []"** => This line starts an outer loop that iterates over the SNS topics created by the aws_sns_topic.my_topics resource. For each topic, the loop assigns the topic's name to the topic_key variable and the entire topic object to the topic variable.
 **"for endpoint in var.endpoints : {}"** => THis line starts an inner loop that iterates over the list of endpoints.(i.e, emails).
