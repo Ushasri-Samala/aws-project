@@ -1,5 +1,14 @@
 # CLOUDWATCH
 
+
+## Prerequisites 
+
+->Terraform installed on your local machine
+->AWS credentials configured on your local machine
+
+
+## Resources Created
+
 -----> Resource **"aws_cloudwatch_dashboard"** => It represents an Amazon CloudWatch dashboard.
 **"dashboard_name"** => This name will ne displayed for the CloudWatch dashboard in the AWS Management Console.
 **"dashboard_body"** => This is a JSON-encoded string that defines the layout and content of the CloudWatch dashboard.
@@ -8,6 +17,18 @@
 **"width and height"** => This properties define the size of the widget.
 **"properties"** => properties of widget includng the type of view, title of the widget and the AWS region to use.
 **"metrics"** => defines the metrics to be dispayed in the widget. **"period, stat, start, end"** => period(5 minutes), statistic to use (average) and the time range to display(the last 3 hours). 
+
+
+## Commands to run the application
+->terraform init => To initialize the Terraform working directory.
+->terraform plan => Plan the Terraform deployment.
+->terraform apply => Apply the Terraform deployment.
+->terraform destroy => To delete the created resources.
+     
+## Output 
+Successfully added Resources.
+
+
 
 
 
